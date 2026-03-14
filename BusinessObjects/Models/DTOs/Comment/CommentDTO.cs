@@ -1,0 +1,19 @@
+using BusinessObjects.Constants;
+
+namespace BusinessObjects.Models.DTOs.Comment;
+
+public class CommentDTO
+{
+    public Guid Id { get; set; }
+    public string Content { get; set; } = string.Empty;
+    public bool IsDeleted { get; set; } = false;
+    public string TopicName { get; set; } = string.Empty;
+    public string? Author { get; set; } = string.Empty;
+    public string? Avatar { get; set; }
+    public VoteType VoteType { get; set; } = VoteType.UNVOTE;
+    public int VoteCount { get; set; }
+    public Guid PostId { get; set; }
+    public Guid? AttachmentId { get; set; }
+    public Guid? ReplyId { get; set; }
+    public TimeSpan Elapsed { get; set; }
+}
